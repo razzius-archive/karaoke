@@ -1,1 +1,1 @@
-web: python karaoke/manage.py runserver
+web: gunicorn karaoke.karaoke.wsgi
