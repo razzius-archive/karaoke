@@ -193,8 +193,6 @@ THIRD_PARTY_APPS = (
     'south',
     'django_twilio',
     'django_extensions',
-    'boto',
-    'storages',
 )
 
 # Apps specific for this project go here.
@@ -247,5 +245,3 @@ WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 
 TWILIO_ACCOUNT_SID = 'ACf94d9aa39897b2f5802d9e6b8c615030'
 TWILIO_AUTH_TOKEN = '82688e84b07d98286b01fa2ccad5fcb4'
-
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
