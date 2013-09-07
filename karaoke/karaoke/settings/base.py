@@ -193,6 +193,8 @@ THIRD_PARTY_APPS = (
     'south',
     'django_twilio',
     'django_extensions',
+    'boto',
+    'storages',
 )
 
 # Apps specific for this project go here.
@@ -245,3 +247,10 @@ WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 
 TWILIO_ACCOUNT_SID = 'ACf94d9aa39897b2f5802d9e6b8c615030'
 TWILIO_AUTH_TOKEN = '82688e84b07d98286b01fa2ccad5fcb4'
+
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = 'kara-ok'
+AWS_PRELOAD_METADATA = True
+
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
