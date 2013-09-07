@@ -9,20 +9,20 @@
     }
     @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
-/*basic reset*/
-html {
-    height: 100%;
-}
-body {
-	height: 100%;
-	/*Image only BG fallback*/
-	background: url('http://thecodeplayer.com/uploads/media/gs.png');
-	background-color: black;
-	background:
-		linear-gradient(hsla(240, 10%, 20%, 0.9), hsla(240, 10%, 10%, 0.9)),
-		url('http://thecodeplayer.com/uploads/media/gs.png');
-    font-family: montserrat, arial, verdana;
-}
+    /*basic reset*/
+    html {
+        height: 100%;
+    }
+    body {
+       height: 100%;
+       /*Image only BG fallback*/
+       background: url('http://thecodeplayer.com/uploads/media/gs.png');
+       background-color: black;
+       background:
+       linear-gradient(hsla(240, 10%, 20%, 0.9), hsla(240, 10%, 10%, 0.9)),
+       url('http://thecodeplayer.com/uploads/media/gs.png');
+       font-family: montserrat, arial, verdana;
+    }
 
 </style>
 
@@ -33,24 +33,39 @@ body {
 <br>
 <br>
 <br>
-<div class="offset2 span8">
+<div class="offset2 span8 text-center">
     <h1 class="text-center">KARAOKE</h1>
+    <div class="from_number">
+        <input type="text">
+    </div>
+    <br>
+    <div class="to_number">
+        <input type="text">
+    </div>
+    <br>
+    <div class="text-center song-chooser">
+        <select id="song" data-placeholder="Choose a Song..." class="chosen-select" style="width:350px;" tabindex="2">
+          <option value=""></option>
+          <option value="indaclub">In Da Club</option>
+      </select>
+    </div>
+
+
+
     <h2 class="text-center">CALL ME BABY</h2>
 </div>
 
-<form>
-
-</form>
 
 {% endblock %}
 
 {% block scripts %}
 <script type="text/javascript">
-$("#call").click(function() {
-    $.get("/call/", function(data) {
-        console.log(data);
+    $("#call").click(function() {
+        $.get("/call/", function(data) {
+            console.log(data);
+        });
     });
-});
+    $("#song").chosen();
 </script>
 {% endblock %}
 
