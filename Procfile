@@ -1,1 +1,1 @@
-web: gunicorn karaoke.karaoke.wsgi
+web: sh -c 'cd karaoke && gunicorn karaoke.wsgi'
