@@ -1,6 +1,4 @@
-"""Common settings and globals."""
-
-
+import os
 from os.path import abspath, basename, dirname, join, normpath
 from sys import path
 
@@ -33,13 +31,11 @@ TEMPLATE_DEBUG = DEBUG
 ########## MANAGER CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#admins
 ADMINS = (
-    ('Your Name', 'your_email@example.com'),
+    ('Razzi Abuissa', 'razzi53@gmail.com'),
+    ('Peter Yin', 'py.peteryin@gmail.com'),
 )
 
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
-########## END MANAGER CONFIGURATION
-
 
 ########## DATABASE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
@@ -109,14 +105,14 @@ STATICFILES_FINDERS = (
 ########## SECRET CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#secret-key
 # Note: This key should only be used for development and testing.
-SECRET_KEY = r"zf2((aj&m*0_wyv-k(462=q-1zhp1_e-1n#or)inld08ve)hy^"
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 ########## END SECRET CONFIGURATION
 
 
 ########## SITE CONFIGURATION
 # Hosts/domain names that are valid for this site
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".herokuapp.com"]
 ########## END SITE CONFIGURATION
 
 
