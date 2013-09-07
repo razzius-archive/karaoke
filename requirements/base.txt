@@ -9,4 +9,3 @@ psycopg2==2.5.1
 django-twilio==0.2
 django-extensions==1.2.0
 certifi==0.0.8
-urllib3==2.7

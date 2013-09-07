@@ -1,1 +1,1 @@
-python karaoke/manage.py runserver
+web: python karaoke/manage.py runserver
