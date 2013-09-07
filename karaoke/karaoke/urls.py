@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, url
 from django.views.generic import TemplateView
+from django.conf import settings
 
 from karaoke.app.views import call
 
@@ -9,7 +10,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='index.html')),
-    url(r"^call/$", call)
+    url(r"^call/$", call),
 
     # Examples:
     # url(r'^$', 'karaoke.views.home', name='home'),
@@ -20,4 +21,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {
+               'document_root': settings.STATIC_ROOT,
+           }),
 )
