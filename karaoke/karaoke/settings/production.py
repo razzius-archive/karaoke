@@ -30,10 +30,11 @@ DATABASES = {
 # heroku static
 
 import os
-PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
+DJANGO_ROOT = dirname(dirname(abspath(__file__)))
+
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_PATH, 'static'),
+    os.path.join(DJANGO_ROOT, 'karaoke/static'),
 )
