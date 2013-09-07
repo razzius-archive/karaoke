@@ -11,5 +11,16 @@
 {% block content %}
 <div class="offset2 span8">
     <h3 class="text-center">KARAOKE</h3>
+    <h1 id="call">CALL</h1>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+$("#call").click(function() {
+    $.get("/call/", function(data) {
+        console.log(data);
+    });
+});
+</script>
 {% endblock %}

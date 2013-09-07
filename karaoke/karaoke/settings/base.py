@@ -191,10 +191,13 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
+    'django_twilio',
+    'django_extensions',
 )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
+    "app",
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -239,3 +242,6 @@ LOGGING = {
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 ########## END WSGI CONFIGURATION
+
+TWILIO_ACCOUNT_SID = 'ACf94d9aa39897b2f5802d9e6b8c615030'
+TWILIO_AUTH_TOKEN = '82688e84b07d98286b01fa2ccad5fcb4'

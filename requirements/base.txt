@@ -6,3 +6,5 @@ logutils==0.3.3
 South==0.8.1
 twilio==3.5.3
 psycopg2==2.5.1
+django-twilio==0.2
+django-extensions==1.2.0
