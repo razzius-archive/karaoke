@@ -52,9 +52,3 @@ DATABASES = {
     'default': dj_database_url.config(default='postgres://localhost')
 }
 ########## END DATABASE CONFIGURATION
-
-
-########## CACHE CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#caches
-CACHES = {}
-########## END CACHE CONFIGURATION
